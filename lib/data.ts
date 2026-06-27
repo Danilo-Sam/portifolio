@@ -1,14 +1,14 @@
 export const profile = {
   name: "Danilo Sampaio",
-  role: "Desenvolvedor Full Stack Java Júnior",
+  role: "Desenvolvedor Full Stack Java",
   rolesTyped: [
-    "Desenvolvedor Full Stack Java Júnior",
+    "Desenvolvedor Full Stack Java",
     "Java • Spring Boot",
     "React • TypeScript",
     "Clean Code & APIs RESTful",
   ],
   shortBio:
-    "Desenvolvedor Full Stack Java Júnior, graduando em Engenharia de Software e formado em Desenvolvimento Full Stack Java pela EBAC. Construo soluções ponta a ponta unindo back-end em Java/Spring Boot com interfaces modernas em React e TypeScript.",
+    "Desenvolvedor Full Stack Java, graduando em Engenharia de Software e formado em Desenvolvimento Full Stack Java pela EBAC. Construo soluções ponta a ponta unindo back-end em Java/Spring Boot com interfaces modernas em React e TypeScript.",
   bioTerminal: [
     "> cat sobre.txt",
     "Desenvolvedor Full Stack Java, formado pela EBAC (Escola Britânica",
@@ -37,15 +37,17 @@ export const stats = [
   { label: "Formação Full Stack", value: "EBAC" },
   { label: "Projetos no GitHub", value: "3+" },
   { label: "Tecnologias estudadas", value: "15+" },
-  { label: "Nível atual", value: "Júnior" },
 ];
 
 export const techMarquee = [
   "JAVA",
+  "C",
+  "PHP",
   "SPRING BOOT",
   "SPRING MVC",
   "SPRING SECURITY",
   "SPRING DATA JPA",
+  "SWING",
   "REACT.JS",
   "VUE.JS",
   "NEXT.JS",
@@ -67,7 +69,7 @@ export const techMarquee = [
 export type SkillGroup = {
   category: string;
   icon: "backend" | "frontend" | "database" | "tools";
-  skills: { name: string; level: number }[];
+  skills: { name: string; level: string }[];
 };
 
 export const skillGroups: SkillGroup[] = [
@@ -75,44 +77,44 @@ export const skillGroups: SkillGroup[] = [
     category: "Backend",
     icon: "backend",
     skills: [
-      { name: "Java (POO)", level: 78 },
-      { name: "Spring Boot / Spring MVC", level: 72 },
-      { name: "REST APIs", level: 70 },
-      { name: "Swing / JavaFX", level: 50 },
-      { name: "Spring Security", level: 60 },
-      { name: "Hibernate / JPA", level: 65 },
-      { name: "Python", level: 76 },
+      { name: "Java (POO)", level: "Intermediário" },
+      { name: "Spring Boot / Spring MVC", level: "Básico" },
+      { name: "REST APIs", level: "Básico" },
+      { name: "Swing / JavaFX", level: "Básico" },
+      { name: "Spring Security", level: "Básico" },
+      { name: "Hibernate / JPA", level: "Básico" },
+      { name: "Python", level: "Intermediário" },
     ],
   },
   {
     category: "Frontend",
     icon: "frontend",
     skills: [
-      { name: "JavaScript (ES6+)", level: 80 },
-      { name: "React.js", level: 75 },
-      { name: "Next.js", level: 35 },
-      { name: "TypeScript", level: 68 },
-      { name: "Vue.js / Redux / Vuex", level: 58 },
-      { name: "HTML5 / CSS3 / SASS", level: 85 },
+      { name: "JavaScript (ES6+)", level: "Intermediário" },
+      { name: "React.js", level: "Intermediário" },
+      { name: "Next.js", level: "Básico" },
+      { name: "TypeScript", level: "Intermediário" },
+      { name: "Vue.js / Redux / Vuex", level: "Básico" },
+      { name: "HTML5 / CSS3 / SASS", level: "Avançado" },
     ],
   },
   {
     category: "Banco de Dados",
     icon: "database",
     skills: [
-      { name: "SQL", level: 68 },
-      { name: "MySQL", level: 66 },
-      { name: "PostgreSQL", level: 75 },
+      { name: "SQL", level: "Básico" },
+      { name: "MySQL", level: "Básico" },
+      { name: "PostgreSQL", level: "Intermediário" },
     ],
   },
   {
     category: "Testes & Ferramentas",
     icon: "tools",
     skills: [
-      { name: "Git & GitHub", level: 80 },
-      { name: "JUnit / Mockito", level: 60 },
-      { name: "Cypress / Jest", level: 55 },
-      { name: "Maven / NPM", level: 65 },
+      { name: "Git & GitHub", level: "Intermediário" },
+      { name: "JUnit / Mockito", level: "Básico" },
+      { name: "Cypress / Jest", level: "Básico" },
+      { name: "Maven / NPM", level: "Intermediário" },
     ],
   },
 ];
@@ -157,12 +159,21 @@ export const projects: Project[] = [
   },
   {
     id: "proj-04",
-    title: "EBAC Games Redux",
+    title: "efood",
     description:
-      "Projeto base do curso EBAC reestruturado por iniciativa própria: removi useState e useEffect e migrei o controle de estado do carrinho e dos favoritos para Redux, com melhorias e ajustes adicionais.",
+      "Aplicação web inspirada em plataformas de delivery, desenvolvida com React e TypeScript,permitindo a visualização de restaurantes, listagem dinâmica de produtos e interação do usuáriocom a interface. O projeto realiza consumo de API REST, controle de estado da aplicação elayout responsivo, simulando funcionalidades comuns em aplicações reais de mercado.",
     status: "CURSO EBAC",
-    tags: ["JavaScript", "React", "Redux"],
-    github: "https://github.com/Danilo-Sam/ebac_games_redux",
+    tags: ["TypeScript", "React", "Redux", "API REST", "CSS3"],
+    github: "https://github.com/Danilo-Sam/efood",
+  },
+  {
+    id: "proj-05",
+    title: "Jogo campo minado",
+    description:
+      "Desenvolvi uma aplicação desktop do jogo Campo Minado utilizando Java e a biblioteca gráfica Swing, com forte foco na aplicação prática de Programação Orientada a Objetos (POO) e padrões de projeto. Separei de forma independente a lógica de regras de negócio do tabuleiro da camada de interface do usuário. O projeto envolveu a criação de algoritmos recursivos eficientes para a propagação automática de cliques em áreas vazias e o mapeamento dinâmico de coordenadas, resultando em um software limpo, performático e visualmente interativo.",
+    status: "Pessoal",
+    tags: ["Swing", "Java", "POO", "Algoritmos Recursivos"],
+    github: "https://github.com/Danilo-Sam/jogo_campo_minado",
   }
 ];
 

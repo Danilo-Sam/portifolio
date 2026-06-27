@@ -11,7 +11,7 @@ export default function TechMarquee() {
             key={`${tech}-${i}`}
             className="font-mono text-sm sm:text-base px-6 whitespace-nowrap text-steel"
           >
-            <span className="text-cyan mr-2">/</span>
+            <span className="text-cyan mr-2"></span>
             {tech}
           </span>
         ))}
