@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-padding-top: 80px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00f5ff, #ff1744);
+  border-radius: 0;
+}
+
+/* ---------- Grid overlay ---------- */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(0, 245, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 245, 255, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* ---------- Scanline overlay ---------- */
+.scanline-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 40;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.025) 0px,
+    rgba(255, 255, 255, 0.025) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  mix-blend-mode: overlay;
+}
+
+.scanline-overlay::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 140px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 245, 255, 0.05),
+    transparent
+  );
+  animation: scanline 7s linear infinite;
+}
+
+/* ---------- Vignette ---------- */
+.vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 45%,
+    rgba(10, 10, 15, 0.85) 100%
+  );
+}
+
+/* ---------- Glitch text ---------- */
+.glitch {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  opacity: 0.85;
+}
+
+.glitch::before {
+  color: #00f5ff;
+  z-index: -1;
+  animation: glitchTop 3s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  color: #ff1744;
+  z-index: -2;
+  animation: glitchBottom 3s infinite linear alternate-reverse;
+}
+
+.glitch:hover::before,
+.glitch:hover::after {
+  animation-duration: 0.5s;
+}
+
+/* ---------- Terminal window chrome ---------- */
+.term-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* ---------- Clip angled panels ---------- */
+.clip-corner {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%);
+}
+
+.clip-corner-sm {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+}
+
+/* ---------- Neon utilities ---------- */
+.text-glow-cyan {
+  text-shadow: 0 0 8px rgba(0, 245, 255, 0.7), 0 0 24px rgba(0, 245, 255, 0.25);
+}
+
+.text-glow-crimson {
+  text-shadow: 0 0 8px rgba(255, 23, 68, 0.7), 0 0 24px rgba(255, 23, 68, 0.25);
+}
+
+.border-glow-cyan {
+  box-shadow: 0 0 0 1px rgba(0, 245, 255, 0.4), 0 0 20px rgba(0, 245, 255, 0.12);
+}
+
+.section-label::before {
+  content: "//";
+  color: #ff1744;
+  margin-right: 8px;
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
