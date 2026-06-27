@@ -187,11 +187,26 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
   {
-    period: "04/2024 — Atual",
-    role: "Motorista de veículo  transbordo",
-    company: "Açúcar e Álcool Oswaldo Ribeiro de Oliveira Ltda. — Guaíra/SP",
+    period: "10/2024 — Atual",
+    role: "Em Transição de Carreira",
+    company: "Em Transição de Carreira. — Guaíra/SP",
     description:
       "Atuação em organização e acompanhamento de produção, conciliando a rotina de trabalho com os estudos em desenvolvimento de software.",
+    highlights: [
+      "Gestão de Estado Complexo: Refatoração completa da arquitetura do projeto Ebac Games Redux, substituindo hooks locais por Redux global, otimizando a previsibilidade e o fluxo de dados da aplicação.",
+      "Desenvolvimento de Soluções Ponta a Ponta: Construção da plataforma de delivery eFood, integrando o consumo de APIs RESTful dinâmicas a um fluxo completo de checkout e validação de formulários.",
+      "Clean Code e Performance: Criação de componentes reutilizáveis e modulares com React.js e TypeScript, visando interfaces responsivas com foco em semântica e boas práticas de desenvolvimento.",
+      "Alta Adaptabilidade e Evolução: Histórico profissional comprovado de crescimento e rápida absorção de novos processos, evidenciado pela promoção recente de Apontador de Produção para Motorista de Veículo Transbordo.",
+      "Resiliência e Trabalho sob Pressão: Sólida experiência em ambientes operacionais de grande porte, desenvolvendo facilidade para trabalhar em equipe focada no cumprimento rigoroso de metas diárias.",
+      "Foco em Organização e Liderança: Habilidade consolidada no controle, organização e fluxo de dados operacionais em tempo real, aplicando competências de liderança para resolver gargalos práticos."
+    ],
+  },
+  {
+    period: "04/2024 — Atual",
+    role: "Motorista de Veículo  Transbordo",
+    company: "Açúcar e Álcool Oswaldo Ribeiro de Oliveira Ltda. — Guaíra/SP",
+    description:
+      "Desenvolvedor Front-End em transição de carreira, graduando em Engenharia de Software e formado como Desenvolvedor Full Stack pela EBAC. Minha trajetória profissional no setor industrial e logístico me consolidou uma forte bagagem em liderança operacional, adaptabilidade rápida a novos cenários, trabalho em equipe sob pressão e foco rigoroso no cumprimento de metas. Na área técnica, possuo experiência prática no desenvolvimento de interfaces modernas e funcionais utilizando React.js, TypeScript e Redux, com foco em arquitetura de código limpo e consumo de APIs RESTful. Busco integrar minha resiliência e maturidade profissional a times de tecnologia, entregando soluções eficientes e com foco na experiência do usuário.",
     highlights: [
       "Organização e comunicação no acompanhamento da produção",
       "Trabalho em equipe e adaptabilidade a diferentes situações",
