@@ -34,8 +34,9 @@ export const profile = {
 };
 
 export const stats = [
+  // { label: ""}
   { label: "Formação Full Stack", value: "EBAC" },
-  { label: "Projetos no GitHub", value: "3+" },
+  { label: "Projetos no GitHub", value: "7+" },
   { label: "Tecnologias estudadas", value: "15+" },
 ];
 
@@ -132,24 +133,35 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "proj-01",
+    title: "Portfólio Full-Stack",
+    description:
+      "Portfólio Full-Stack de Alta Performance (Next.js & TypeScript): Desenvolvi uma plataforma SPA corporativa com design imersivo inspirado em terminais Linux para centralizar meus projetos e consolidar minha stack técnica. A aplicação aplica conceitos avançados de Clean Code, componentização modular e roteamento otimizado com Next.js, além de tipagem estática rigorosa em TypeScript. Todo o ciclo de desenvolvimento, refatoração de arquitetura e otimização de performance foi acelerado via CLI com o auxílio do Claude Code (AI-Assisted Development), demonstrando proficiência no uso de ferramentas de IA de última geração para entrega rápida e código de alta qualidade.",
+    status: "PROJETO PESSOAL",
+    tags: ["Next.js", "TypeScript", "Tailwind css"],
+    github: "https://github.com/Danilo-Sam/portfolio",
+    demo: "https://danilo-sampaio-portfolio.netlify.app/"
+  },
+  {
+    id: "proj-02",
     title: "EBAC Games Redux",
     description:
       "Projeto base do curso EBAC reestruturado por iniciativa própria: removi useState e useEffect e migrei o controle de estado do carrinho e dos favoritos para Redux, com melhorias e ajustes adicionais.",
     status: "CURSO EBAC",
-    tags: ["JavaScript", "React", "Redux"],
+    tags: ["Typescript", "React", "Redux"],
     github: "https://github.com/Danilo-Sam/ebac_games_redux",
   },
   {
-    id: "proj-02",
+    id: "proj-03",
     title: "Clone Disney Plus+",
     description:
       "Clone do site da Disney+ construído em HTML, SASS e JavaScript, com o código organizado em seções correspondentes a cada parte do layout original e build automatizado com Gulp para minificação e compilação dos arquivos.",
     status: "CURSO EBAC",
     tags: ["HTML", "SASS", "CSS", "JavaScript", "Gulp"],
     github: "https://github.com/Danilo-Sam/clone_disneyplus",
+    demo: "https://clone-disneyplus-danilo.vercel.app/"
   },
   {
-    id: "proj-03",
+    id: "proj-04",
     title: "Exercício de CSS",
     description:
       "Projeto pessoal criado para solidificar conceitos de CSS: imagens, formulários, títulos e fontes customizadas, construído com HTML e CSS puros e versionado com Git/GitHub.",
@@ -158,24 +170,36 @@ export const projects: Project[] = [
     github: "https://github.com/Danilo-Sam/exercicio_css",
   },
   {
-    id: "proj-04",
+    id: "proj-05",
     title: "efood",
     description:
       "Aplicação web inspirada em plataformas de delivery, desenvolvida com React e TypeScript,permitindo a visualização de restaurantes, listagem dinâmica de produtos e interação do usuáriocom a interface. O projeto realiza consumo de API REST, controle de estado da aplicação elayout responsivo, simulando funcionalidades comuns em aplicações reais de mercado.",
     status: "CURSO EBAC",
     tags: ["TypeScript", "React", "Redux", "API REST", "CSS3"],
     github: "https://github.com/Danilo-Sam/efood",
+    demo: "https://efood-coral-pi.vercel.app/"
   },
   {
-    id: "proj-05",
+    id: "proj-06",
     title: "Jogo campo minado",
     description:
       "Desenvolvi uma aplicação desktop do jogo Campo Minado utilizando Java e a biblioteca gráfica Swing, com forte foco na aplicação prática de Programação Orientada a Objetos (POO) e padrões de projeto. Separei de forma independente a lógica de regras de negócio do tabuleiro da camada de interface do usuário. O projeto envolveu a criação de algoritmos recursivos eficientes para a propagação automática de cliques em áreas vazias e o mapeamento dinâmico de coordenadas, resultando em um software limpo, performático e visualmente interativo.",
-    status: "Pessoal",
+    status: "PROJETO PESSOAL",
     tags: ["Swing", "Java", "POO", "Algoritmos Recursivos"],
     github: "https://github.com/Danilo-Sam/jogo_campo_minado",
+  },
+  {
+    id: "proj-07",
+    title: "Minhas Tarefas",
+    description:
+      "Gerenciador de Tarefas Avançado (React + TypeScript): Desenvolvi uma aplicação robusta de gerenciamento de tarefas focada em arquitetura escalável e qualidade de código. Utilizei Redux Toolkit para centralizar o estado global de filtros complexos e métricas em tempo real, além de TypeScript para garantir segurança de tipos em toda a aplicação. O projeto conta com cobertura de testes robusta via React Testing Library, assegurando o funcionamento correto de fluxos críticos de usuário (como criação, filtros dinâmicos e edição) de forma automatizada.",
+    status: "CURSO EBAC",
+    tags: ["React", "Reduxjs", "Testing Library", "Typescript"],
+    github: "https://github.com/Danilo-Sam/minhas-tarefas",
+    demo: "https://minhas-tarefas-lilac.vercel.app/"
   }
 ];
+
 
 export type ExperienceItem = {
   period: string;
@@ -188,7 +212,7 @@ export type ExperienceItem = {
 export const experience: ExperienceItem[] = [
   {
     period: "10/2024 — Atual",
-    role: "Em Transição de Carreira",
+    role: "Desenvolvedor Full Stack Java",
     company: "Em Transição de Carreira. — Guaíra/SP",
     description:
       "Desenvolvedor Front-End em transição de carreira, graduando em Engenharia de Software e formado como Desenvolvedor Full Stack pela EBAC. Minha trajetória profissional no setor industrial e logístico me consolidou uma forte bagagem em liderança operacional, adaptabilidade rápida a novos cenários, trabalho em equipe sob pressão e foco rigoroso no cumprimento de metas. Na área técnica, possuo experiência prática no desenvolvimento de interfaces modernas e funcionais utilizando React.js, TypeScript e Redux, com foco em arquitetura de código limpo e consumo de APIs RESTful. Busco integrar minha resiliência e maturidade profissional a times de tecnologia, entregando soluções eficientes e com foco na experiência do usuário.",
